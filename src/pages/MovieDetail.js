@@ -6,6 +6,7 @@ export const  MovieDetail = () => {
   const params = useParams(); //access the parameters from the current URL {id} in the movie id
   const[movie ,setMovie] = useState({});//manage the component's state and side effects 
   const image = movie.poster_path ? `https://image.tmdb.org/t/p/w500/${movie.poster_path}` : Backup;
+  
   useEffect(() => {
     async function fetchMovie() {
       const response = await fetch(`https://api.themoviedb.org/3/movie/${params.id}?api_key=df7861568de66e24a1c2de6ab4900e1d`);
@@ -14,6 +15,7 @@ export const  MovieDetail = () => {
     }
     fetchMovie()
   }, [params.id]);
+    //eslint-disable-next-line
   const pageTitle = useTitle(movie.original_title)
 
   return (

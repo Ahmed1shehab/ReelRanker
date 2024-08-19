@@ -3,6 +3,7 @@ import {Button} from "../components";
 import { Link } from "react-router-dom";
 import { useTitle } from "../hooks/useTitle";
 export const PageNotFound = () => {
+    //eslint-disable-next-line
   const pageTitle =useTitle("Page Not Found");
   return (
     <main>

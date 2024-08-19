@@ -8,7 +8,7 @@ export const  Search = ({apiPath}) => {
   const [searchParams] = useSearchParams();//search the params
   const query = searchParams.get("q"); //get the query
   const{data : movies} = useFetch(apiPath,query); // {data : movies}
-
+  //eslint-disable-next-line
   const pageTitle = useTitle(`Result for ${query}`);
   
   return (
