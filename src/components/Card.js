@@ -3,9 +3,9 @@ import { Link } from "react-router-dom"
 import Backup from '../assets/error1.jpg'
 export const  Card = ({movie}) => {
   const {id, original_title, overview, poster_path} = movie;
-    {/*get the id and title and overview and poster path from the passed prop movie  */}
+    /*get the id and title and overview and poster path from the passed prop movie  */
   const image = poster_path ? `https://image.tmdb.org/t/p/w500/${poster_path}` : Backup;
-      {/* check if poster path is there then add this link + poster path else add the backup */}
+      /* check if poster path is there then add this link + poster path else add the backup */
   return (
     <div className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 m-3">
         <Link to={`/movie/${id}`}>
