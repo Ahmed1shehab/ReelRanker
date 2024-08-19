@@ -1,4 +1,6 @@
 [[redirects]]
-from = "/*"
-to = "/index.html"
-status = 200
+  from = "/search"
+  to = "https://api.mysearch.com"
+  status = 200
+  force = true
+  headers = {X-From = "Netlify"}
