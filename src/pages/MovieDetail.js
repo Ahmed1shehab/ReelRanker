@@ -13,7 +13,7 @@ export const  MovieDetail = () => {
       setMovie(json); // the fetched data is then stored in the movie state using setMovie. 
     }
     fetchMovie()
-  }, []);
+  }, [params.id]);
   const pageTitle = useTitle(movie.original_title)
 
   return (
